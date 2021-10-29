@@ -12,8 +12,8 @@ class MainViewController: UIViewController {
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
-    let login = "Tim"
-    let password = "qwerty123"
+    private let login = "Tim"
+    private let password = "qwerty123"
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeWC = segue.destination as? WelcomeViewController else { return }
@@ -33,7 +33,16 @@ class MainViewController: UIViewController {
         showAlert(with: "Your password", and: "\(password)")
     }
     
+    @IBAction func unwind(for seague: UIStoryboardSegue) {
+        passwordTextField.text = nil
+        loginTextField.text = nil
+    }
     
+    // Метод для скрытия клавиатуры тапом по экрану
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super .touchesBegan(touches, with: event)
+        view.endEditing(true)
+    }
 }
 
 // MARK: - Private Methods
@@ -48,3 +57,4 @@ extension MainViewController {
         present(alert, animated: true)
     }
 }
+
