@@ -58,14 +58,9 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         alert.addAction(okAction)
         present(alert, animated: true)
     }
+        
+    // MARK: - Методы для работы с клавиатурой
     
-
-}
-
-// MARK: - Private Methods
-extension MainViewController: UITextViewDelegate {
-    
-    // Метод для скрытия клавиатуры тапом по экрану
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super .touchesBegan(touches, with: event)
         view.endEditing(true)
@@ -79,6 +74,5 @@ extension MainViewController: UITextViewDelegate {
         }
         return true
     }
-    
-}
 
+}
