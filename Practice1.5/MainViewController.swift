@@ -7,13 +7,22 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
     private let login = "Tim"
     private let password = "qwerty123"
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        loginTextField.delegate = self
+        loginTextField.returnKeyType = .next
+        passwordTextField.delegate = self
+        passwordTextField.returnKeyType = .done
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeWC = segue.destination as? WelcomeViewController else { return }
@@ -24,7 +33,10 @@ class MainViewController: UIViewController {
         if loginTextField.text != login || passwordTextField.text != password {
             showAlert(with: "BE-BE-BE", and: "wrong password or login")
         }
+        performSegue(withIdentifier: "showWelcomeVC", sender: nil)
+        
     }
+    
     @IBAction func forgetUserButton() {
         showAlert(with: "Your login", and: "\(login)")
     }
@@ -38,16 +50,6 @@ class MainViewController: UIViewController {
         loginTextField.text = nil
     }
     
-    // Метод для скрытия клавиатуры тапом по экрану
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super .touchesBegan(touches, with: event)
-        view.endEditing(true)
-    }
-}
-
-// MARK: - Private Methods
-extension MainViewController {
-    
     private func showAlert(with title: String, and message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .cancel) { _ in
@@ -56,5 +58,27 @@ extension MainViewController {
         alert.addAction(okAction)
         present(alert, animated: true)
     }
+    
+
+}
+
+// MARK: - Private Methods
+extension MainViewController: UITextViewDelegate {
+    
+    // Метод для скрытия клавиатуры тапом по экрану
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super .touchesBegan(touches, with: event)
+        view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == loginTextField {
+            passwordTextField.becomeFirstResponder()
+        } else {
+            loginButtonPressed()
+        }
+        return true
+    }
+    
 }
 
