@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7554A57C272ABE8000BCC6CC /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7554A57B272ABE8000BCC6CC /* WelcomeViewController.swift */; };
 		7554A57E272ABEA900BCC6CC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7554A57D272ABEA900BCC6CC /* MainViewController.swift */; };
+		758DBF30275DEA6C0006D9D8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758DBF2F275DEA6C0006D9D8 /* User.swift */; };
 		75CA1FB5272990F60023114E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CA1FB4272990F60023114E /* AppDelegate.swift */; };
 		75CA1FB7272990F60023114E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CA1FB6272990F60023114E /* SceneDelegate.swift */; };
 		75CA1FBC272990F60023114E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75CA1FBA272990F60023114E /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		7554A57B272ABE8000BCC6CC /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		7554A57D272ABEA900BCC6CC /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		758DBF2F275DEA6C0006D9D8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		75CA1FB1272990F60023114E /* Practice1.5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Practice1.5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75CA1FB4272990F60023114E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75CA1FB6272990F60023114E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +41,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		758DBF2B275DE8A10006D9D8 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				75CA1FBA272990F60023114E /* Main.storyboard */,
+				75CA1FBF272990F70023114E /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		758DBF2C275DE8AD0006D9D8 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				75CA1FB6272990F60023114E /* SceneDelegate.swift */,
+				75CA1FB4272990F60023114E /* AppDelegate.swift */,
+				75CA1FC2272990F70023114E /* Info.plist */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
+		758DBF2D275DE8F30006D9D8 /* ViewControlles */ = {
+			isa = PBXGroup;
+			children = (
+				7554A57D272ABEA900BCC6CC /* MainViewController.swift */,
+				7554A57B272ABE8000BCC6CC /* WelcomeViewController.swift */,
+			);
+			path = ViewControlles;
+			sourceTree = "<group>";
+		};
+		758DBF2E275DEA5C0006D9D8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				758DBF2F275DEA6C0006D9D8 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		75CA1FA8272990F60023114E = {
 			isa = PBXGroup;
 			children = (
@@ -58,14 +96,11 @@
 		75CA1FB3272990F60023114E /* Practice1.5 */ = {
 			isa = PBXGroup;
 			children = (
-				75CA1FB4272990F60023114E /* AppDelegate.swift */,
-				75CA1FB6272990F60023114E /* SceneDelegate.swift */,
-				75CA1FBA272990F60023114E /* Main.storyboard */,
-				7554A57D272ABEA900BCC6CC /* MainViewController.swift */,
-				7554A57B272ABE8000BCC6CC /* WelcomeViewController.swift */,
+				758DBF2E275DEA5C0006D9D8 /* Models */,
+				758DBF2C275DE8AD0006D9D8 /* Supporting */,
+				758DBF2B275DE8A10006D9D8 /* StoryBoards */,
+				758DBF2D275DE8F30006D9D8 /* ViewControlles */,
 				75CA1FBD272990F70023114E /* Assets.xcassets */,
-				75CA1FBF272990F70023114E /* LaunchScreen.storyboard */,
-				75CA1FC2272990F70023114E /* Info.plist */,
 			);
 			path = Practice1.5;
 			sourceTree = "<group>";
@@ -144,6 +179,7 @@
 				7554A57C272ABE8000BCC6CC /* WelcomeViewController.swift in Sources */,
 				75CA1FB5272990F60023114E /* AppDelegate.swift in Sources */,
 				75CA1FB7272990F60023114E /* SceneDelegate.swift in Sources */,
+				758DBF30275DEA6C0006D9D8 /* User.swift in Sources */,
 				7554A57E272ABEA900BCC6CC /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,7 +331,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2N67ZPLU84;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Practice1.5/Info.plist;
+				INFOPLIST_FILE = Practice1.5/Supporting/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -324,7 +360,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2N67ZPLU84;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Practice1.5/Info.plist;
+				INFOPLIST_FILE = Practice1.5/Supporting/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
