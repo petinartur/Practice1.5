@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7510D76B276377540083020E /* AbououMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7510D76A276377540083020E /* AbououMeViewController.swift */; };
+		7510D76D2763778C0083020E /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7510D76C2763778C0083020E /* MyPageViewController.swift */; };
 		7554A57C272ABE8000BCC6CC /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7554A57B272ABE8000BCC6CC /* WelcomeViewController.swift */; };
 		7554A57E272ABEA900BCC6CC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7554A57D272ABEA900BCC6CC /* MainViewController.swift */; };
 		758DBF30275DEA6C0006D9D8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758DBF2F275DEA6C0006D9D8 /* User.swift */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7510D76A276377540083020E /* AbououMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbououMeViewController.swift; sourceTree = "<group>"; };
+		7510D76C2763778C0083020E /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		7554A57B272ABE8000BCC6CC /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		7554A57D272ABEA900BCC6CC /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		758DBF2F275DEA6C0006D9D8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -65,6 +69,8 @@
 			children = (
 				7554A57D272ABEA900BCC6CC /* MainViewController.swift */,
 				7554A57B272ABE8000BCC6CC /* WelcomeViewController.swift */,
+				7510D76A276377540083020E /* AbououMeViewController.swift */,
+				7510D76C2763778C0083020E /* MyPageViewController.swift */,
 			);
 			path = ViewControlles;
 			sourceTree = "<group>";
@@ -178,7 +184,9 @@
 			files = (
 				7554A57C272ABE8000BCC6CC /* WelcomeViewController.swift in Sources */,
 				75CA1FB5272990F60023114E /* AppDelegate.swift in Sources */,
+				7510D76D2763778C0083020E /* MyPageViewController.swift in Sources */,
 				75CA1FB7272990F60023114E /* SceneDelegate.swift in Sources */,
+				7510D76B276377540083020E /* AbououMeViewController.swift in Sources */,
 				758DBF30275DEA6C0006D9D8 /* User.swift in Sources */,
 				7554A57E272ABEA900BCC6CC /* MainViewController.swift in Sources */,
 			);

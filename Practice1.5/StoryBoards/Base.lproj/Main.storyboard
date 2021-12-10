@@ -171,7 +171,7 @@
         <!--About me-->
         <scene sceneID="ysB-Pq-p8m">
             <objects>
-                <viewController id="uXT-kd-lIf" sceneMemberID="viewController">
+                <viewController id="uXT-kd-lIf" customClass="AbououMeViewController" customModule="Practice1_5" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zrw-eH-reT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -214,15 +214,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="About me" id="4wd-tj-59m"/>
+                    <connections>
+                        <outlet property="welcomeLabel" destination="zRH-aQ-Sw9" id="yjE-mP-ljn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q6I-RE-x49" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2382" y="847"/>
         </scene>
-        <!--View Controller-->
+        <!--My Page View Controller-->
         <scene sceneID="dj9-ie-JRY">
             <objects>
-                <viewController id="h4r-Cj-IaE" sceneMemberID="viewController">
+                <viewController id="h4r-Cj-IaE" customClass="MyPageViewController" customModule="Practice1_5" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TN1-OV-WHB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -252,6 +255,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="MOv-LP-tp6"/>
+                    <connections>
+                        <outlet property="aboutMeLabel" destination="y6w-1E-r3L" id="8xf-Z4-jEN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3DZ-cs-F78" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

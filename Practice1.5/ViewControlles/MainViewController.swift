@@ -29,6 +29,10 @@ class MainViewController: UIViewController, UITextFieldDelegate {
          for viewController in viewControllers {
             if let welcomVC = viewController as? WelcomeViewController {
                 welcomVC.user = persons.userName
+            } else if let navigationVC = viewController as? UINavigationController {
+                let aboutUserVC = navigationVC.topViewController as! AbououMeViewController
+                aboutUserVC.name = persons.person.firstName
+                aboutUserVC.aboutMe = persons.person.aboutPerson
             }
         }
          

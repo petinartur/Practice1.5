@@ -17,8 +17,5 @@ class WelcomeViewController: UIViewController {
 
         welcomeMessage.text = "Welcome \(user)"
     }
-
-
-    
     
 }
