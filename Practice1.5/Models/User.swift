@@ -14,13 +14,12 @@ struct User {
         User(
             userName: "Tim",
             password: "qwerty123",
-            person: Person(firstName: "Artur", lastName: "Petin", aboutPerson: "Сижу, учу свифт, играю роцк и слишком много прокрастинирую :-(")
+            person: Person(firstName: "Artur", aboutPerson: "Сижу, учу свифт, играю роцк и слишком много прокрастинирую :-(")
         )
     }
 }
 
 struct Person {
     let firstName: String
-    let lastName: String
     let aboutPerson: String
 }
