@@ -12,8 +12,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
-    private let login = "Tim"
-    private let password = "qwerty123"
+    let  persons = User.getPerson()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,12 +24,20 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeWC = segue.destination as? WelcomeViewController else { return }
-        welcomeWC.user = login
+        guard let tabBarController = segue.destination as? UITabBarController else {return}
+        guard let viewControllers = tabBarController.viewControllers else {return}
+         for viewController in viewControllers {
+            if let welcomVC = viewController as? WelcomeViewController {
+                welcomVC.user = persons.userName
+            }
+        }
+         
+        //guard let welcomeWC = segue.destination as? WelcomeViewController else { return }
+        //welcomeWC.user = login
     }
     
     @IBAction func loginButtonPressed() {
-        if loginTextField.text != login || passwordTextField.text != password {
+        if loginTextField.text != persons.userName || passwordTextField.text != persons.password {
             showAlert(with: "BE-BE-BE", and: "wrong password or login")
         }
         performSegue(withIdentifier: "showWelcomeVC", sender: nil)
@@ -38,11 +45,11 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func forgetUserButton() {
-        showAlert(with: "Your login", and: "\(login)")
+        showAlert(with: "Your login", and: "\(persons.userName)")
     }
     
     @IBAction func forgetPasswordButton() {
-        showAlert(with: "Your password", and: "\(password)")
+        showAlert(with: "Your password", and: "\(persons.password)")
     }
     
     @IBAction func unwind(for seague: UIStoryboardSegue) {
