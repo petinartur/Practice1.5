@@ -14,7 +14,7 @@ struct User {
         User(
             userName: "Tim",
             password: "qwerty123",
-            person: Person(firstName: "Artur", aboutPerson: "Сижу, учу свифт, играю роцк и слишком много прокрастинирую :-(")
+            person: Person(firstName: "Artur", aboutPerson: "Сижу, учу свифт, играю роцк и слишком много прокрастинирую :-(", picture: "IMG_0271")
         )
     }
 }
@@ -22,4 +22,5 @@ struct User {
 struct Person {
     let firstName: String
     let aboutPerson: String
+    let picture: String
 }

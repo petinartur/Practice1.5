@@ -9,14 +9,15 @@ import UIKit
 
 class MyPageViewController: UIViewController {
 
-    
+    @IBOutlet weak var avatarImage: UIImageView!
     @IBOutlet weak var aboutMeLabel: UILabel!
-    
-    var aboutMe = ""
+  
+    var user: User!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        aboutMeLabel.text = "\(aboutMe)"
+        avatarImage.image = UIImage(named: user.person.picture)
+        aboutMeLabel.text = "\(user.person.aboutPerson)"
     }
     
 

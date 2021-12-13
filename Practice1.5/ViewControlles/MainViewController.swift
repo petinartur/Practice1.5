@@ -12,7 +12,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
-    let  persons = User.getPerson()
+    let persons = User.getPerson()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,16 +28,12 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         guard let viewControllers = tabBarController.viewControllers else {return}
          for viewController in viewControllers {
             if let welcomVC = viewController as? WelcomeViewController {
-                welcomVC.user = persons.userName
+                welcomVC.user = persons
             } else if let navigationVC = viewController as? UINavigationController {
                 let aboutUserVC = navigationVC.topViewController as! AbououMeViewController
-                aboutUserVC.name = persons.person.firstName
-                aboutUserVC.aboutMe = persons.person.aboutPerson
+                aboutUserVC.user = persons
             }
         }
-         
-        //guard let welcomeWC = segue.destination as? WelcomeViewController else { return }
-        //welcomeWC.user = login
     }
     
     @IBAction func loginButtonPressed() {
